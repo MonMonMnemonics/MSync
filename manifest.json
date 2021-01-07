@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "MSync",
+  "version": "1.0",
+
+  "description": "Extension to syncronize youtube website and MChad desktop app",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["*://www.youtube.com/watch?v=*"],
+      "js": ["InjectBtn.js"]
+    }
+  ]
+}
